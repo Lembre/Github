@@ -30,7 +30,9 @@ public class Mytelphone {
     public void setMem(float mem) {
         this.mem = mem;
     }
+    public Mytelphone(){
 
+    }
     public Mytelphone(float screen,float cpu,float mem){
         this.screen= screen;
         this.cpu= cpu;
@@ -39,7 +41,7 @@ public class Mytelphone {
 
     @Override
     public boolean equals(Object o) {//在重写之前，equals()比较引用的地址是否相同,重写是为了只要值相等，就认为是同一个对象
-        if (this == o) return true;//在如果指向同一个地址，那么对象“绝对相同”
+        if (this == o) return true;//在如果指向同一个地址的话，那么对象“绝对相同”，不用再比下去了
         if (o == null || getClass() != o.getClass()) return false;//如果传入的是空指针或类对象不同，那么绝对不同；
         //Mytelphone that = (Mytelphone) o;类对象：一个类的所有对象对应同一个类对象。子类也不行
         return /*Float.compare(that.screen, screen) == 0 &&
